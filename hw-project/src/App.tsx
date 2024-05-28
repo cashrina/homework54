@@ -18,7 +18,7 @@ const createItems = () => {
     return squares;
 }
 
-const App: React.FC  = () => {
+const App  = () => {
     const [items, setItems] = useState<SquareItem[]>(createItems());
 
     const handleClick = (index: number) => {

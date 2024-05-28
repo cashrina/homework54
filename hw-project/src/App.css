@@ -27,3 +27,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.guessed {
+  background-image: url("./kitten.jpg");
+}
