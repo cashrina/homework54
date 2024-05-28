@@ -7,13 +7,12 @@ interface Props {
 }
 
 const Square: React.FC<Props> = ({hasItem, clicked}) => {
-    const squareNoClasses = 'square-no';
-    const squareClasses = 'square';
-    const hasItemNoClasses = 'item-no';
-    const hasItemClasses = 'item';
+    const squareClasses = clicked ? 'square-no' : 'square';
+    const itemClasses = hasItem ? 'item' : '';
+
     return (
-        <div className={clicked ? squareNoClasses : squareClasses}>
-            <div className={hasItem ? hasItemNoClasses : hasItemClasses}></div>
+        <div className={squareClasses}>
+            <div className={itemClasses}></div>
         </div>
     );
 };

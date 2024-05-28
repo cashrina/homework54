@@ -5,19 +5,11 @@
   text-align: center;
 }
 
-.App .square-no{
- display: none;
-}
-
 .App .square {
   border: 1px solid #7600c5;
   background-color: #8300c5;
   width: 25px;
   height: 25px;
-}
-
-.App .item {
-  background-color: #d51616;
 }
 
 .App {
@@ -27,4 +19,11 @@
   gap: 5px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.reset {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
 }
