@@ -15,7 +15,6 @@ const createItems = () => {
     }
     const randomIndex = Math.floor(Math.random() * squares.length);
     squares[randomIndex].hasItem = true;
-    console.log(squares);
     return squares;
 }
 
@@ -23,18 +22,22 @@ const App: React.FC  = () => {
     const [items, setItems] = useState<SquareItem[]>(createItems());
 
     const handleClick = (index: number) => {
+        if (items[index].clicked) {
+            alert('Нельзя повторно выбирать одну и ту же ячейку!');
+            return;
+        }
+
         setItems(prevState => {
-            const updatedItems = prevState.map((item, i) => {
+            return prevState.map((item, i) => {
                 if (i === index) {
                     return { ...item, clicked: true };
                 } else {
-                    return { ...item, clicked: false };
+                    return item;
                 }
             });
-            return updatedItems;
         });
+        console.log(items);
     };
-
 
     return (
         <div className="container">
